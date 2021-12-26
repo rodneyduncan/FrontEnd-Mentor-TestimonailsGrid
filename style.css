@@ -1,0 +1,136 @@
+:root {
+    --ModerateViolet:  hsl(263, 55%, 52%);
+    --VeryDarkGrayishBlue:  hsl(217, 19%, 35%);
+    --VeryDarkBlackishBlue:  hsl(219, 29%, 14%);
+    --White:  hsl(0, 0%, 100%);
+    --Light-gray:  hsl(0, 0%, 81%);
+    --Light-grayish-blue:  hsl(210, 46%, 95%);
+}
+
+body {
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+		margin: 0 auto;
+		box-sizing: border-box;
+		width: 100%;
+}
+img{
+	max-width: 100%;
+	display: block;
+}
+/*Typography*/
+
+.first-testimonial,
+.second-testimonial,
+.fourth-testimonial {
+    color: var(--White);
+}
+
+.first-testimonial {
+    background: var(--ModerateViolet) url(bg-pattern-quotation.svg) no-repeat right 10% top;
+}
+
+.second-testimonial {
+    background: var(--VeryDarkGrayishBlue);
+}
+
+.third-testimonial,
+.fifth-testimonial {
+    color: var(--VeryDarkGrayishBlue);
+    background: var(--White);
+}
+
+.fourth-testimonial {
+    background: var(--VeryDarkBlackishBlue);
+}
+
+.testimonial-graduate{
+	opacity: 0.5;
+}
+.testimonial-text {
+    opacity: 0.7;
+}
+.testimonial-text,
+.testimonial-header{
+	line-height: 1.5em;
+}
+
+/*Layout*/
+.grid-testimonial{
+	border-radius: 10px;
+	-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.14); 
+	box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.14);
+	padding: 3em;
+	margin: 0 auto;
+	
+}
+
+.grid{
+	display: grid;
+	grid-gap: 1em;
+	justify-content: center;
+	margin: 0 auto;
+	grid-template-columns: 1fr;
+	width: 90%;
+}
+
+.testimonial-graduate,
+.testimonial-name{
+margin: 0.5em 0;
+}
+
+.testimonial-info{
+	display: flex;
+	justify-content: flex-start;
+	width: 75%;
+}
+
+.testimonial-image{
+	margin-right: 1.5em;
+	border-radius: 50%;	
+}
+
+.border-first{
+	border: 3px solid rgb(167, 117, 241);
+}
+.border{
+	border: 3px solid var(--ModerateViolet);
+}
+
+@media (min-width: 1220px) {
+body{
+	font-size: 15px;
+}
+
+.grid{
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, auto);
+grid-gap: 1em;
+padding: 1em;
+}
+
+
+.first-testimonial{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.second-testimonial{
+	grid-column-start: 3;
+	grid-column-end: 3;
+}
+.third-testimonial{
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.fourth-testimonial{
+	grid-row-start: 2;
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+.fifth-testimonial{
+	grid-row-start: 1;
+	grid-row-end: 4;
+	//grid-column-start: 
+}
+}
